@@ -5,9 +5,18 @@
 # Use either a "for loop" or "while loop" to accomplish this.
 
 def main():
-    ######################
-    # WRITE YOUR CODE HERE
-    ######################
+    total_tickets = 0
+
+    while True:
+        choice = input("Do you want to enter a movie? (yes/no): ").lower()
+        if choice == "no":
+            break
+
+        movie = input("Enter movie name: ")
+        tickets = int(input(f"How many tickets for {movie}? "))
+        total_tickets += tickets
+
+    print(f"\nTotal tickets desired: {total_tickets}")
 
 
 if __name__ == '__main__':
